@@ -1,1 +1,1 @@
-Machine Learing Project (Debt Repayment Probability Predection) Model and API
+Debt Prediction Model and API
