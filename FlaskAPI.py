@@ -16,8 +16,8 @@ model_knei = pickle.load(open('KNei.pkl', 'rb'))
 
 
 #create API Routing call for RandomForest Classifier
-@app.route('/predict_rf', methods= ['POST'])
-def predict_rf():
+@app.route('/predict', methods= ['POST'])
+def predict():
     # GET JSON Request
     test_input = request.json
 
