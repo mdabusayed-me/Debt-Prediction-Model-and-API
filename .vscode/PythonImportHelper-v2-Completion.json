@@ -1,0 +1,629 @@
+[
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "pickle",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pickle",
+        "description": "pickle",
+        "detail": "pickle",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "CORS",
+        "importPath": "flask_cors",
+        "description": "flask_cors",
+        "isExtraImport": true,
+        "detail": "flask_cors",
+        "documentation": {}
+    },
+    {
+        "label": "CORS",
+        "importPath": "flask_cors",
+        "description": "flask_cors",
+        "isExtraImport": true,
+        "detail": "flask_cors",
+        "documentation": {}
+    },
+    {
+        "label": "create_engine",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "create_engine",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "create_engine",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "LabelEncoder",
+        "importPath": "sklearn.preprocessing",
+        "description": "sklearn.preprocessing",
+        "isExtraImport": true,
+        "detail": "sklearn.preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "LabelEncoder",
+        "importPath": "sklearn.preprocessing",
+        "description": "sklearn.preprocessing",
+        "isExtraImport": true,
+        "detail": "sklearn.preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "LabelEncoder",
+        "importPath": "sklearn.preprocessing",
+        "description": "sklearn.preprocessing",
+        "isExtraImport": true,
+        "detail": "sklearn.preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "LabelEncoder",
+        "importPath": "sklearn.preprocessing",
+        "description": "sklearn.preprocessing",
+        "isExtraImport": true,
+        "detail": "sklearn.preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "train_test_split",
+        "importPath": "sklearn.model_selection",
+        "description": "sklearn.model_selection",
+        "isExtraImport": true,
+        "detail": "sklearn.model_selection",
+        "documentation": {}
+    },
+    {
+        "label": "train_test_split",
+        "importPath": "sklearn.model_selection",
+        "description": "sklearn.model_selection",
+        "isExtraImport": true,
+        "detail": "sklearn.model_selection",
+        "documentation": {}
+    },
+    {
+        "label": "train_test_split",
+        "importPath": "sklearn.model_selection",
+        "description": "sklearn.model_selection",
+        "isExtraImport": true,
+        "detail": "sklearn.model_selection",
+        "documentation": {}
+    },
+    {
+        "label": "KNeighborsClassifier",
+        "importPath": "sklearn.neighbors",
+        "description": "sklearn.neighbors",
+        "isExtraImport": true,
+        "detail": "sklearn.neighbors",
+        "documentation": {}
+    },
+    {
+        "label": "joblib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "joblib",
+        "description": "joblib",
+        "detail": "joblib",
+        "documentation": {}
+    },
+    {
+        "label": "GaussianNB",
+        "importPath": "sklearn.naive_bayes",
+        "description": "sklearn.naive_bayes",
+        "isExtraImport": true,
+        "detail": "sklearn.naive_bayes",
+        "documentation": {}
+    },
+    {
+        "label": "RandomForestClassifier",
+        "importPath": "sklearn.ensemble",
+        "description": "sklearn.ensemble",
+        "isExtraImport": true,
+        "detail": "sklearn.ensemble",
+        "documentation": {}
+    },
+    {
+        "label": "predict",
+        "kind": 2,
+        "importPath": "FlaskAPI",
+        "description": "FlaskAPI",
+        "peekOfCode": "def predict():\n    # GET JSON Request\n    test_input = request.json\n    df = pd.DataFrame(test_input)\n    # GET Prediction\n    prediction = model_rf.predict(df)\n    #retrun JSON Version of Prediction\n    return jsonify({'prediction': float(prediction)})\n#create API Routing call for Naib Bayes\n@app.route('/predict_nb', methods= ['POST'])",
+        "detail": "FlaskAPI",
+        "documentation": {}
+    },
+    {
+        "label": "predict_nb",
+        "kind": 2,
+        "importPath": "FlaskAPI",
+        "description": "FlaskAPI",
+        "peekOfCode": "def predict_nb():\n    # GET JSON Request\n    test_input = request.json\n    df = pd.DataFrame(test_input)\n    # GET Prediction\n    prediction = model_nb.predict(df)\n    #retrun JSON Version of Prediction\n    return jsonify({'prediction': float(prediction)})\n#create API Routing call Knei\n@app.route('/predict_knei', methods= ['POST'])",
+        "detail": "FlaskAPI",
+        "documentation": {}
+    },
+    {
+        "label": "predict_knei",
+        "kind": 2,
+        "importPath": "FlaskAPI",
+        "description": "FlaskAPI",
+        "peekOfCode": "def predict_knei():\n    # GET JSON Request\n    test_input = request.json\n    df = pd.DataFrame(test_input)\n    # GET Prediction\n    prediction = model_knei.predict(df)\n    #retrun JSON Version of Prediction\n    return jsonify({'prediction': float(prediction)})\napp.run(debug=True, host= '0.0.0.0', port=12345)",
+        "detail": "FlaskAPI",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "FlaskAPI",
+        "description": "FlaskAPI",
+        "peekOfCode": "app = Flask(__name__)\nCORS(app)\n# Load the save mode\n# model_rf = pickle.load(open('Randomf.pkl', 'rb'))\nmodel_rf = pickle.load(open('Randomf_jubair.pkl', 'rb'))\nmodel_nb = pickle.load(open('Naivb.pkl', 'rb'))\nmodel_knei = pickle.load(open('KNei.pkl', 'rb'))\n#create API Routing call for RandomForest Classifier\n@app.route('/predict', methods= ['POST'])\ndef predict():",
+        "detail": "FlaskAPI",
+        "documentation": {}
+    },
+    {
+        "label": "model_rf",
+        "kind": 5,
+        "importPath": "FlaskAPI",
+        "description": "FlaskAPI",
+        "peekOfCode": "model_rf = pickle.load(open('Randomf_jubair.pkl', 'rb'))\nmodel_nb = pickle.load(open('Naivb.pkl', 'rb'))\nmodel_knei = pickle.load(open('KNei.pkl', 'rb'))\n#create API Routing call for RandomForest Classifier\n@app.route('/predict', methods= ['POST'])\ndef predict():\n    # GET JSON Request\n    test_input = request.json\n    df = pd.DataFrame(test_input)\n    # GET Prediction",
+        "detail": "FlaskAPI",
+        "documentation": {}
+    },
+    {
+        "label": "model_nb",
+        "kind": 5,
+        "importPath": "FlaskAPI",
+        "description": "FlaskAPI",
+        "peekOfCode": "model_nb = pickle.load(open('Naivb.pkl', 'rb'))\nmodel_knei = pickle.load(open('KNei.pkl', 'rb'))\n#create API Routing call for RandomForest Classifier\n@app.route('/predict', methods= ['POST'])\ndef predict():\n    # GET JSON Request\n    test_input = request.json\n    df = pd.DataFrame(test_input)\n    # GET Prediction\n    prediction = model_rf.predict(df)",
+        "detail": "FlaskAPI",
+        "documentation": {}
+    },
+    {
+        "label": "model_knei",
+        "kind": 5,
+        "importPath": "FlaskAPI",
+        "description": "FlaskAPI",
+        "peekOfCode": "model_knei = pickle.load(open('KNei.pkl', 'rb'))\n#create API Routing call for RandomForest Classifier\n@app.route('/predict', methods= ['POST'])\ndef predict():\n    # GET JSON Request\n    test_input = request.json\n    df = pd.DataFrame(test_input)\n    # GET Prediction\n    prediction = model_rf.predict(df)\n    #retrun JSON Version of Prediction",
+        "detail": "FlaskAPI",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "kind": 5,
+        "importPath": "KNN_Model",
+        "description": "KNN_Model",
+        "peekOfCode": "engine = create_engine(\"mysql+mysqlconnector://root:@localhost/debt_db\")\n# Test the connection\nconnection = engine.connect()\nQuery = \"SELECT * FROM loans\"\ndf = pd.read_sql_query(Query, connection)\ndf\nle = LabelEncoder()\ndf['Address'] = le.fit_transform(df['Address'])\ndf['Schm_Desc'] = le.fit_transform(df['Schm_Desc'])\ndf['Status'] = le.fit_transform(df['Status'])",
+        "detail": "KNN_Model",
+        "documentation": {}
+    },
+    {
+        "label": "connection",
+        "kind": 5,
+        "importPath": "KNN_Model",
+        "description": "KNN_Model",
+        "peekOfCode": "connection = engine.connect()\nQuery = \"SELECT * FROM loans\"\ndf = pd.read_sql_query(Query, connection)\ndf\nle = LabelEncoder()\ndf['Address'] = le.fit_transform(df['Address'])\ndf['Schm_Desc'] = le.fit_transform(df['Schm_Desc'])\ndf['Status'] = le.fit_transform(df['Status'])\nfeatures=['Address','Schm_Desc','Rate','Sanct_Lim']\ntarget=['Balance']",
+        "detail": "KNN_Model",
+        "documentation": {}
+    },
+    {
+        "label": "Query",
+        "kind": 5,
+        "importPath": "KNN_Model",
+        "description": "KNN_Model",
+        "peekOfCode": "Query = \"SELECT * FROM loans\"\ndf = pd.read_sql_query(Query, connection)\ndf\nle = LabelEncoder()\ndf['Address'] = le.fit_transform(df['Address'])\ndf['Schm_Desc'] = le.fit_transform(df['Schm_Desc'])\ndf['Status'] = le.fit_transform(df['Status'])\nfeatures=['Address','Schm_Desc','Rate','Sanct_Lim']\ntarget=['Balance']\nx=df[features]",
+        "detail": "KNN_Model",
+        "documentation": {}
+    },
+    {
+        "label": "df",
+        "kind": 5,
+        "importPath": "KNN_Model",
+        "description": "KNN_Model",
+        "peekOfCode": "df = pd.read_sql_query(Query, connection)\ndf\nle = LabelEncoder()\ndf['Address'] = le.fit_transform(df['Address'])\ndf['Schm_Desc'] = le.fit_transform(df['Schm_Desc'])\ndf['Status'] = le.fit_transform(df['Status'])\nfeatures=['Address','Schm_Desc','Rate','Sanct_Lim']\ntarget=['Balance']\nx=df[features]\ny=df[target]",
+        "detail": "KNN_Model",
+        "documentation": {}
+    },
+    {
+        "label": "le",
+        "kind": 5,
+        "importPath": "KNN_Model",
+        "description": "KNN_Model",
+        "peekOfCode": "le = LabelEncoder()\ndf['Address'] = le.fit_transform(df['Address'])\ndf['Schm_Desc'] = le.fit_transform(df['Schm_Desc'])\ndf['Status'] = le.fit_transform(df['Status'])\nfeatures=['Address','Schm_Desc','Rate','Sanct_Lim']\ntarget=['Balance']\nx=df[features]\ny=df[target]\nx_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, shuffle=False)\nx_train.head()",
+        "detail": "KNN_Model",
+        "documentation": {}
+    },
+    {
+        "label": "df['Address']",
+        "kind": 5,
+        "importPath": "KNN_Model",
+        "description": "KNN_Model",
+        "peekOfCode": "df['Address'] = le.fit_transform(df['Address'])\ndf['Schm_Desc'] = le.fit_transform(df['Schm_Desc'])\ndf['Status'] = le.fit_transform(df['Status'])\nfeatures=['Address','Schm_Desc','Rate','Sanct_Lim']\ntarget=['Balance']\nx=df[features]\ny=df[target]\nx_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, shuffle=False)\nx_train.head()\nmodel  = KNeighborsClassifier()",
+        "detail": "KNN_Model",
+        "documentation": {}
+    },
+    {
+        "label": "df['Schm_Desc']",
+        "kind": 5,
+        "importPath": "KNN_Model",
+        "description": "KNN_Model",
+        "peekOfCode": "df['Schm_Desc'] = le.fit_transform(df['Schm_Desc'])\ndf['Status'] = le.fit_transform(df['Status'])\nfeatures=['Address','Schm_Desc','Rate','Sanct_Lim']\ntarget=['Balance']\nx=df[features]\ny=df[target]\nx_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, shuffle=False)\nx_train.head()\nmodel  = KNeighborsClassifier()\nmodel.fit(x_train, y_train)",
+        "detail": "KNN_Model",
+        "documentation": {}
+    },
+    {
+        "label": "df['Status']",
+        "kind": 5,
+        "importPath": "KNN_Model",
+        "description": "KNN_Model",
+        "peekOfCode": "df['Status'] = le.fit_transform(df['Status'])\nfeatures=['Address','Schm_Desc','Rate','Sanct_Lim']\ntarget=['Balance']\nx=df[features]\ny=df[target]\nx_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, shuffle=False)\nx_train.head()\nmodel  = KNeighborsClassifier()\nmodel.fit(x_train, y_train)\nlabel_encoder = LabelEncoder()",
+        "detail": "KNN_Model",
+        "documentation": {}
+    },
+    {
+        "label": "label_encoder",
+        "kind": 5,
+        "importPath": "KNN_Model",
+        "description": "KNN_Model",
+        "peekOfCode": "label_encoder = LabelEncoder()\ntest_input = pd.DataFrame({'Address': ['Amborkhana'],'Schm_Desc':['PERSONAL LOAN'],'Rate': [4], 'Sanct_Lim': [100000]})\ntest_input['Address']=label_encoder.fit_transform(test_input['Address'])\ntest_input['Schm_Desc']=label_encoder.fit_transform(test_input['Schm_Desc'])\nmodel.predict(test_input)\n# joblib.dump(model, 'RandormForest_Classifier.joblib')\n# model = joblib.load('RandormForest_Classifier.joblib')\n# model.predict(test_input)\npickle.dump(model , open('Knei.pkl' , 'wb'))\nloaded_model = pickle.load(open('Knei.pkl' , 'rb'))",
+        "detail": "KNN_Model",
+        "documentation": {}
+    },
+    {
+        "label": "test_input",
+        "kind": 5,
+        "importPath": "KNN_Model",
+        "description": "KNN_Model",
+        "peekOfCode": "test_input = pd.DataFrame({'Address': ['Amborkhana'],'Schm_Desc':['PERSONAL LOAN'],'Rate': [4], 'Sanct_Lim': [100000]})\ntest_input['Address']=label_encoder.fit_transform(test_input['Address'])\ntest_input['Schm_Desc']=label_encoder.fit_transform(test_input['Schm_Desc'])\nmodel.predict(test_input)\n# joblib.dump(model, 'RandormForest_Classifier.joblib')\n# model = joblib.load('RandormForest_Classifier.joblib')\n# model.predict(test_input)\npickle.dump(model , open('Knei.pkl' , 'wb'))\nloaded_model = pickle.load(open('Knei.pkl' , 'rb'))\nloaded_model.predict(test_input)",
+        "detail": "KNN_Model",
+        "documentation": {}
+    },
+    {
+        "label": "loaded_model",
+        "kind": 5,
+        "importPath": "KNN_Model",
+        "description": "KNN_Model",
+        "peekOfCode": "loaded_model = pickle.load(open('Knei.pkl' , 'rb'))\nloaded_model.predict(test_input)",
+        "detail": "KNN_Model",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "kind": 5,
+        "importPath": "Naiv_bayes_Model",
+        "description": "Naiv_bayes_Model",
+        "peekOfCode": "engine = create_engine(\"mysql+mysqlconnector://root:@localhost/debt_db\")\n# Test the connection\nconnection = engine.connect()\nQuery = \"SELECT * FROM loans\"\ndf = pd.read_sql_query(Query, connection)\ndf\nle = LabelEncoder()\ndf['Address'] = le.fit_transform(df['Address'])\ndf['Schm_Desc'] = le.fit_transform(df['Schm_Desc'])\ndf['Status'] = le.fit_transform(df['Status'])",
+        "detail": "Naiv_bayes_Model",
+        "documentation": {}
+    },
+    {
+        "label": "connection",
+        "kind": 5,
+        "importPath": "Naiv_bayes_Model",
+        "description": "Naiv_bayes_Model",
+        "peekOfCode": "connection = engine.connect()\nQuery = \"SELECT * FROM loans\"\ndf = pd.read_sql_query(Query, connection)\ndf\nle = LabelEncoder()\ndf['Address'] = le.fit_transform(df['Address'])\ndf['Schm_Desc'] = le.fit_transform(df['Schm_Desc'])\ndf['Status'] = le.fit_transform(df['Status'])\nfeatures=['Address','Schm_Desc','Rate','Sanct_Lim']\ntarget=['Balance']",
+        "detail": "Naiv_bayes_Model",
+        "documentation": {}
+    },
+    {
+        "label": "Query",
+        "kind": 5,
+        "importPath": "Naiv_bayes_Model",
+        "description": "Naiv_bayes_Model",
+        "peekOfCode": "Query = \"SELECT * FROM loans\"\ndf = pd.read_sql_query(Query, connection)\ndf\nle = LabelEncoder()\ndf['Address'] = le.fit_transform(df['Address'])\ndf['Schm_Desc'] = le.fit_transform(df['Schm_Desc'])\ndf['Status'] = le.fit_transform(df['Status'])\nfeatures=['Address','Schm_Desc','Rate','Sanct_Lim']\ntarget=['Balance']\nx=df[features]",
+        "detail": "Naiv_bayes_Model",
+        "documentation": {}
+    },
+    {
+        "label": "df",
+        "kind": 5,
+        "importPath": "Naiv_bayes_Model",
+        "description": "Naiv_bayes_Model",
+        "peekOfCode": "df = pd.read_sql_query(Query, connection)\ndf\nle = LabelEncoder()\ndf['Address'] = le.fit_transform(df['Address'])\ndf['Schm_Desc'] = le.fit_transform(df['Schm_Desc'])\ndf['Status'] = le.fit_transform(df['Status'])\nfeatures=['Address','Schm_Desc','Rate','Sanct_Lim']\ntarget=['Balance']\nx=df[features]\ny=df[target]",
+        "detail": "Naiv_bayes_Model",
+        "documentation": {}
+    },
+    {
+        "label": "le",
+        "kind": 5,
+        "importPath": "Naiv_bayes_Model",
+        "description": "Naiv_bayes_Model",
+        "peekOfCode": "le = LabelEncoder()\ndf['Address'] = le.fit_transform(df['Address'])\ndf['Schm_Desc'] = le.fit_transform(df['Schm_Desc'])\ndf['Status'] = le.fit_transform(df['Status'])\nfeatures=['Address','Schm_Desc','Rate','Sanct_Lim']\ntarget=['Balance']\nx=df[features]\ny=df[target]\nx_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, shuffle=False)\nx_train.head()",
+        "detail": "Naiv_bayes_Model",
+        "documentation": {}
+    },
+    {
+        "label": "df['Address']",
+        "kind": 5,
+        "importPath": "Naiv_bayes_Model",
+        "description": "Naiv_bayes_Model",
+        "peekOfCode": "df['Address'] = le.fit_transform(df['Address'])\ndf['Schm_Desc'] = le.fit_transform(df['Schm_Desc'])\ndf['Status'] = le.fit_transform(df['Status'])\nfeatures=['Address','Schm_Desc','Rate','Sanct_Lim']\ntarget=['Balance']\nx=df[features]\ny=df[target]\nx_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, shuffle=False)\nx_train.head()\nmodel  = GaussianNB()",
+        "detail": "Naiv_bayes_Model",
+        "documentation": {}
+    },
+    {
+        "label": "df['Schm_Desc']",
+        "kind": 5,
+        "importPath": "Naiv_bayes_Model",
+        "description": "Naiv_bayes_Model",
+        "peekOfCode": "df['Schm_Desc'] = le.fit_transform(df['Schm_Desc'])\ndf['Status'] = le.fit_transform(df['Status'])\nfeatures=['Address','Schm_Desc','Rate','Sanct_Lim']\ntarget=['Balance']\nx=df[features]\ny=df[target]\nx_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, shuffle=False)\nx_train.head()\nmodel  = GaussianNB()\nmodel.fit(x_train, y_train)",
+        "detail": "Naiv_bayes_Model",
+        "documentation": {}
+    },
+    {
+        "label": "df['Status']",
+        "kind": 5,
+        "importPath": "Naiv_bayes_Model",
+        "description": "Naiv_bayes_Model",
+        "peekOfCode": "df['Status'] = le.fit_transform(df['Status'])\nfeatures=['Address','Schm_Desc','Rate','Sanct_Lim']\ntarget=['Balance']\nx=df[features]\ny=df[target]\nx_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, shuffle=False)\nx_train.head()\nmodel  = GaussianNB()\nmodel.fit(x_train, y_train)\nlabel_encoder = LabelEncoder()",
+        "detail": "Naiv_bayes_Model",
+        "documentation": {}
+    },
+    {
+        "label": "label_encoder",
+        "kind": 5,
+        "importPath": "Naiv_bayes_Model",
+        "description": "Naiv_bayes_Model",
+        "peekOfCode": "label_encoder = LabelEncoder()\ntest_input = pd.DataFrame({'Address': ['Amborkhana'],'Schm_Desc':['PERSONAL LOAN'],'Rate': [4], 'Sanct_Lim': [100000]})\ntest_input['Address']=label_encoder.fit_transform(test_input['Address'])\ntest_input['Schm_Desc']=label_encoder.fit_transform(test_input['Schm_Desc'])\nmodel.predict(test_input)\n# joblib.dump(model, 'RandormForest_Classifier.joblib')\n# model = joblib.load('RandormForest_Classifier.joblib')\n# model.predict(test_input)\npickle.dump(model , open('Naivb.pkl' , 'wb'))\nloaded_model = pickle.load(open('Naivb.pkl' , 'rb'))",
+        "detail": "Naiv_bayes_Model",
+        "documentation": {}
+    },
+    {
+        "label": "test_input",
+        "kind": 5,
+        "importPath": "Naiv_bayes_Model",
+        "description": "Naiv_bayes_Model",
+        "peekOfCode": "test_input = pd.DataFrame({'Address': ['Amborkhana'],'Schm_Desc':['PERSONAL LOAN'],'Rate': [4], 'Sanct_Lim': [100000]})\ntest_input['Address']=label_encoder.fit_transform(test_input['Address'])\ntest_input['Schm_Desc']=label_encoder.fit_transform(test_input['Schm_Desc'])\nmodel.predict(test_input)\n# joblib.dump(model, 'RandormForest_Classifier.joblib')\n# model = joblib.load('RandormForest_Classifier.joblib')\n# model.predict(test_input)\npickle.dump(model , open('Naivb.pkl' , 'wb'))\nloaded_model = pickle.load(open('Naivb.pkl' , 'rb'))\nloaded_model.predict(test_input)",
+        "detail": "Naiv_bayes_Model",
+        "documentation": {}
+    },
+    {
+        "label": "loaded_model",
+        "kind": 5,
+        "importPath": "Naiv_bayes_Model",
+        "description": "Naiv_bayes_Model",
+        "peekOfCode": "loaded_model = pickle.load(open('Naivb.pkl' , 'rb'))\nloaded_model.predict(test_input)",
+        "detail": "Naiv_bayes_Model",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "kind": 5,
+        "importPath": "Random_F_Cla_Model",
+        "description": "Random_F_Cla_Model",
+        "peekOfCode": "engine = create_engine(\"mysql+mysqlconnector://root:@localhost/debt_db\")\n# Test the connection\nconnection = engine.connect()\nQuery = \"SELECT * FROM loans\"\ndf = pd.read_sql_query(Query, connection)\ndf\nle = LabelEncoder()\ndf['Address'] = le.fit_transform(df['Address'])\ndf['Schm_Desc'] = le.fit_transform(df['Schm_Desc'])\ndf['Status'] = le.fit_transform(df['Status'])",
+        "detail": "Random_F_Cla_Model",
+        "documentation": {}
+    },
+    {
+        "label": "connection",
+        "kind": 5,
+        "importPath": "Random_F_Cla_Model",
+        "description": "Random_F_Cla_Model",
+        "peekOfCode": "connection = engine.connect()\nQuery = \"SELECT * FROM loans\"\ndf = pd.read_sql_query(Query, connection)\ndf\nle = LabelEncoder()\ndf['Address'] = le.fit_transform(df['Address'])\ndf['Schm_Desc'] = le.fit_transform(df['Schm_Desc'])\ndf['Status'] = le.fit_transform(df['Status'])\nfeatures=['Address','Schm_Desc','Rate','Sanct_Lim']\ntarget=['Balance']",
+        "detail": "Random_F_Cla_Model",
+        "documentation": {}
+    },
+    {
+        "label": "Query",
+        "kind": 5,
+        "importPath": "Random_F_Cla_Model",
+        "description": "Random_F_Cla_Model",
+        "peekOfCode": "Query = \"SELECT * FROM loans\"\ndf = pd.read_sql_query(Query, connection)\ndf\nle = LabelEncoder()\ndf['Address'] = le.fit_transform(df['Address'])\ndf['Schm_Desc'] = le.fit_transform(df['Schm_Desc'])\ndf['Status'] = le.fit_transform(df['Status'])\nfeatures=['Address','Schm_Desc','Rate','Sanct_Lim']\ntarget=['Balance']\nx=df[features]",
+        "detail": "Random_F_Cla_Model",
+        "documentation": {}
+    },
+    {
+        "label": "df",
+        "kind": 5,
+        "importPath": "Random_F_Cla_Model",
+        "description": "Random_F_Cla_Model",
+        "peekOfCode": "df = pd.read_sql_query(Query, connection)\ndf\nle = LabelEncoder()\ndf['Address'] = le.fit_transform(df['Address'])\ndf['Schm_Desc'] = le.fit_transform(df['Schm_Desc'])\ndf['Status'] = le.fit_transform(df['Status'])\nfeatures=['Address','Schm_Desc','Rate','Sanct_Lim']\ntarget=['Balance']\nx=df[features]\ny=df[target]",
+        "detail": "Random_F_Cla_Model",
+        "documentation": {}
+    },
+    {
+        "label": "le",
+        "kind": 5,
+        "importPath": "Random_F_Cla_Model",
+        "description": "Random_F_Cla_Model",
+        "peekOfCode": "le = LabelEncoder()\ndf['Address'] = le.fit_transform(df['Address'])\ndf['Schm_Desc'] = le.fit_transform(df['Schm_Desc'])\ndf['Status'] = le.fit_transform(df['Status'])\nfeatures=['Address','Schm_Desc','Rate','Sanct_Lim']\ntarget=['Balance']\nx=df[features]\ny=df[target]\nx_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, shuffle=False)\nx_train.head()",
+        "detail": "Random_F_Cla_Model",
+        "documentation": {}
+    },
+    {
+        "label": "df['Address']",
+        "kind": 5,
+        "importPath": "Random_F_Cla_Model",
+        "description": "Random_F_Cla_Model",
+        "peekOfCode": "df['Address'] = le.fit_transform(df['Address'])\ndf['Schm_Desc'] = le.fit_transform(df['Schm_Desc'])\ndf['Status'] = le.fit_transform(df['Status'])\nfeatures=['Address','Schm_Desc','Rate','Sanct_Lim']\ntarget=['Balance']\nx=df[features]\ny=df[target]\nx_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, shuffle=False)\nx_train.head()\nmodel  = RandomForestClassifier()",
+        "detail": "Random_F_Cla_Model",
+        "documentation": {}
+    },
+    {
+        "label": "df['Schm_Desc']",
+        "kind": 5,
+        "importPath": "Random_F_Cla_Model",
+        "description": "Random_F_Cla_Model",
+        "peekOfCode": "df['Schm_Desc'] = le.fit_transform(df['Schm_Desc'])\ndf['Status'] = le.fit_transform(df['Status'])\nfeatures=['Address','Schm_Desc','Rate','Sanct_Lim']\ntarget=['Balance']\nx=df[features]\ny=df[target]\nx_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, shuffle=False)\nx_train.head()\nmodel  = RandomForestClassifier()\nmodel.fit(x_train, y_train)",
+        "detail": "Random_F_Cla_Model",
+        "documentation": {}
+    },
+    {
+        "label": "df['Status']",
+        "kind": 5,
+        "importPath": "Random_F_Cla_Model",
+        "description": "Random_F_Cla_Model",
+        "peekOfCode": "df['Status'] = le.fit_transform(df['Status'])\nfeatures=['Address','Schm_Desc','Rate','Sanct_Lim']\ntarget=['Balance']\nx=df[features]\ny=df[target]\nx_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, shuffle=False)\nx_train.head()\nmodel  = RandomForestClassifier()\nmodel.fit(x_train, y_train)\nlabel_encoder = LabelEncoder()",
+        "detail": "Random_F_Cla_Model",
+        "documentation": {}
+    },
+    {
+        "label": "label_encoder",
+        "kind": 5,
+        "importPath": "Random_F_Cla_Model",
+        "description": "Random_F_Cla_Model",
+        "peekOfCode": "label_encoder = LabelEncoder()\ntest_input = pd.DataFrame({'Address': ['Amborkhana'],'Schm_Desc':['PERSONAL LOAN'],'Rate': [4], 'Sanct_Lim': [100000]})\ntest_input['Address']=label_encoder.fit_transform(test_input['Address'])\ntest_input['Schm_Desc']=label_encoder.fit_transform(test_input['Schm_Desc'])\nmodel.predict(test_input)\n# joblib.dump(model, 'RandormForest_Classifier.joblib')\n# model = joblib.load('RandormForest_Classifier.joblib')\n# model.predict(test_input)\npickle.dump(model , open('Randomf.pkl' , 'wb'))\nloaded_model = pickle.load(open('Randomf.pkl' , 'rb'))",
+        "detail": "Random_F_Cla_Model",
+        "documentation": {}
+    },
+    {
+        "label": "test_input",
+        "kind": 5,
+        "importPath": "Random_F_Cla_Model",
+        "description": "Random_F_Cla_Model",
+        "peekOfCode": "test_input = pd.DataFrame({'Address': ['Amborkhana'],'Schm_Desc':['PERSONAL LOAN'],'Rate': [4], 'Sanct_Lim': [100000]})\ntest_input['Address']=label_encoder.fit_transform(test_input['Address'])\ntest_input['Schm_Desc']=label_encoder.fit_transform(test_input['Schm_Desc'])\nmodel.predict(test_input)\n# joblib.dump(model, 'RandormForest_Classifier.joblib')\n# model = joblib.load('RandormForest_Classifier.joblib')\n# model.predict(test_input)\npickle.dump(model , open('Randomf.pkl' , 'wb'))\nloaded_model = pickle.load(open('Randomf.pkl' , 'rb'))\nloaded_model.predict(test_input)",
+        "detail": "Random_F_Cla_Model",
+        "documentation": {}
+    },
+    {
+        "label": "loaded_model",
+        "kind": 5,
+        "importPath": "Random_F_Cla_Model",
+        "description": "Random_F_Cla_Model",
+        "peekOfCode": "loaded_model = pickle.load(open('Randomf.pkl' , 'rb'))\nloaded_model.predict(test_input)",
+        "detail": "Random_F_Cla_Model",
+        "documentation": {}
+    },
+    {
+        "label": "get_addresses",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def get_addresses():\n    unique_addresses = df['Address'].unique()\n    return jsonify({\"data\": list(unique_addresses)})\n@app.route('/get_schm_desc', methods=['GET'])\ndef get_schm_desc():\n    unique_scheme = df['Schm Desc'].unique()\n    return jsonify({\"data\": list(unique_scheme)})\nmodel = pickle.load(open('Randomf.pkl', 'rb'))\n@app.route('/predict', methods=['POST'])\ndef predict():",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "get_schm_desc",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def get_schm_desc():\n    unique_scheme = df['Schm Desc'].unique()\n    return jsonify({\"data\": list(unique_scheme)})\nmodel = pickle.load(open('Randomf.pkl', 'rb'))\n@app.route('/predict', methods=['POST'])\ndef predict():\n    try:\n        # Get input data from JSON request\n        data = request.get_json()\n        # address_label_encoder = LabelEncoder()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "predict",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def predict():\n    try:\n        # Get input data from JSON request\n        data = request.get_json()\n        # address_label_encoder = LabelEncoder()\n        # schm_desc_label_encoder = LabelEncoder()\n        # Transform input data using fitted label encoders\n        address = data['Address']\n        schm_desc = data['Schm_Desc']\n        # address = address_label_encoder.transform([data['Address']])",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "predict_real",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def predict_real():\n    try:\n        data = request.get_json()\n        # address_label_encoder = LabelEncoder()\n        # schm_desc_label_encoder = LabelEncoder()\n        # Transform input data using fitted label encoders\n        address = data['Address']\n        schm_desc = data['Schm_Desc']\n        # address = address_label_encoder.transform([data['Address']])\n        # schm_desc = schm_desc_label_encoder.transform([data['Schm_Desc']])",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app = Flask(__name__)\nCORS(app)\ndf = pd.read_csv('dbbl_loan.csv')\ndf['Address'] = df['Area Name']\n@app.route('/get_addresses', methods=['GET'])\ndef get_addresses():\n    unique_addresses = df['Address'].unique()\n    return jsonify({\"data\": list(unique_addresses)})\n@app.route('/get_schm_desc', methods=['GET'])\ndef get_schm_desc():",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "df",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "df = pd.read_csv('dbbl_loan.csv')\ndf['Address'] = df['Area Name']\n@app.route('/get_addresses', methods=['GET'])\ndef get_addresses():\n    unique_addresses = df['Address'].unique()\n    return jsonify({\"data\": list(unique_addresses)})\n@app.route('/get_schm_desc', methods=['GET'])\ndef get_schm_desc():\n    unique_scheme = df['Schm Desc'].unique()\n    return jsonify({\"data\": list(unique_scheme)})",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "df['Address']",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "df['Address'] = df['Area Name']\n@app.route('/get_addresses', methods=['GET'])\ndef get_addresses():\n    unique_addresses = df['Address'].unique()\n    return jsonify({\"data\": list(unique_addresses)})\n@app.route('/get_schm_desc', methods=['GET'])\ndef get_schm_desc():\n    unique_scheme = df['Schm Desc'].unique()\n    return jsonify({\"data\": list(unique_scheme)})\nmodel = pickle.load(open('Randomf.pkl', 'rb'))",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "model = pickle.load(open('Randomf.pkl', 'rb'))\n@app.route('/predict', methods=['POST'])\ndef predict():\n    try:\n        # Get input data from JSON request\n        data = request.get_json()\n        # address_label_encoder = LabelEncoder()\n        # schm_desc_label_encoder = LabelEncoder()\n        # Transform input data using fitted label encoders\n        address = data['Address']",
+        "detail": "app",
+        "documentation": {}
+    }
+]

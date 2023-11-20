@@ -12,7 +12,8 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 
 
 # Load the save mode
-model_rf = pickle.load(open('Randomf.pkl', 'rb'))
+# model_rf = pickle.load(open('Randomf.pkl', 'rb'))
+model_rf = pickle.load(open('Randomf_jubair.pkl', 'rb'))
 model_nb = pickle.load(open('Naivb.pkl', 'rb'))
 model_knei = pickle.load(open('KNei.pkl', 'rb'))
 model_dt = pickle.load(open('DecisionTree.pkl', 'rb'))
@@ -71,6 +72,7 @@ def predict_dt():
 
 
 
+<<<<<<< HEAD
 def _build_cors_preflight_response():
     response = make_response()
     response.headers.add("Access-Control-Allow-Origin", "*")
@@ -85,3 +87,7 @@ def _corsify_actual_response(response):
 
 if __name__ == "__main__":
     app.run(debug=True, host= '0.0.0.0', port=12345)
+=======
+
+app.run(debug=True, host= '0.0.0.0', port=12345)
+>>>>>>> 86e07fa (api created for address and scheme)
