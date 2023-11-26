@@ -16,6 +16,9 @@ model_rf = pickle.load(open('Randomf.pkl', 'rb'))
 model_nb = pickle.load(open('Naivb.pkl', 'rb'))
 model_knei = pickle.load(open('KNei.pkl', 'rb'))
 model_dt = pickle.load(open('DecisionTree.pkl', 'rb'))
+model_ln = pickle.load(open('LinearRegression.pkl', 'rb'))
+model_ln = pickle.load(open('svm.pkl', 'rb'))
+model_ln = pickle.load(open('LogisticRegression.pkl', 'rb'))
 
 
 
