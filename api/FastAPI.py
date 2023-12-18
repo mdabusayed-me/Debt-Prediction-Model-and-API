@@ -3,6 +3,7 @@ import uvicorn
 import numpy as np 
 import pickle
 import pandas as pd
+import requests
 
 
 app = FastAPI()
@@ -10,8 +11,6 @@ app = FastAPI()
 @app.get("/")
 def index():
     return{"hellow": "FastAPI"}
-
-
 
 
 
