@@ -14,12 +14,12 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 # Load the save mode
 # model_rf = pickle.load(open('Randomf.pkl', 'rb'))
 model_rf = pickle.load(open('Randomf_jubair.pkl', 'rb'))
-model_nb = pickle.load(open('Naivb.pkl', 'rb'))
-model_knei = pickle.load(open('KNei.pkl', 'rb'))
-model_dt = pickle.load(open('DecisionTree.pkl', 'rb'))
-model_ln = pickle.load(open('LinearRegression.pkl', 'rb'))
-model_ln = pickle.load(open('svm.pkl', 'rb'))
-model_ln = pickle.load(open('LogisticRegression.pkl', 'rb'))
+model_nb = pickle.load(open('pkl_files\Naivb.pkl', 'rb'))
+model_knei = pickle.load(open('pkl_files\Knei.pkl', 'rb'))
+model_dt = pickle.load(open('pkl_files\DecisionTree.pkl', 'rb'))
+model_lr = pickle.load(open('pkl_files\LinearRegression.pkl', 'rb'))
+model_svm = pickle.load(open('pkl_files\svm.pkl', 'rb'))
+model_lgr = pickle.load(open('pkl_files\LogisticRegression.pkl', 'rb'))
 
 
 
