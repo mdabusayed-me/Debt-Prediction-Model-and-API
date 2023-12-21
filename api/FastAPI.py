@@ -30,10 +30,10 @@ def get_loan_data():
 
 # Add a new loan data
 @app.post("/loan_data")
-def add_loan_data(Loan_ID: str, Gender: int, Married: str, Dependents: int, Education: str, Self_Employed: str, ApplicantIncome: int, CoapplicantIncome: int, LoanAmount: int, Loan_Amount_Term: int, Credit_History: int,  Property_Area: str, Loan_Status: str):
+def add_loan_data(Gender: str, Married: str, Dependents: int, Education: str, Self_Employed: str, ApplicantIncome: int, CoapplicantIncome: int, LoanAmount: int, Loan_Amount_Term: int, Credit_History: int,  Property_Area: str, Loan_Status: str):
     cursor = mydb.cursor()
-    sql = "INSERT INTO loan_data (Loan_ID, Gender, Married, Dependents, Education, Self_Employed, ApplicantIncome, CoapplicantIncome, LoanAmount, Loan_Amount_Term, Credit_History, Property_Area, Loan_Status) VALUES (%s, %s, %s, %s ,%s, %s ,%s, %s ,%s, %s ,%s, %s, %s)"
-    val = (Loan_ID, Gender, Married, Dependents, Education, Self_Employed, ApplicantIncome, CoapplicantIncome, LoanAmount, Loan_Amount_Term, Credit_History, Property_Area, Loan_Status)
+    sql = "INSERT INTO loan_data (Gender, Married, Dependents, Education, Self_Employed, ApplicantIncome, CoapplicantIncome, LoanAmount, Loan_Amount_Term, Credit_History, Property_Area, Loan_Status) VALUES (%s, %s, %s ,%s, %s ,%s, %s ,%s, %s ,%s, %s, %s)"
+    val = (Gender, Married, Dependents, Education, Self_Employed, ApplicantIncome, CoapplicantIncome, LoanAmount, Loan_Amount_Term, Credit_History, Property_Area, Loan_Status)
     cursor.execute(sql, val)
     mydb.commit()
     return {"message": "Loan_data added successfully"}
