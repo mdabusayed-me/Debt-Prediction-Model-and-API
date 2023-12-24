@@ -1,3 +1,4 @@
+import _mysql_connector
 from fastapi import FastAPI, HTTPException, requests
 import mysql.connector
 import uvicorn
@@ -5,6 +6,8 @@ import numpy as np
 import pickle
 import joblib
 import pandas as pd
+import traceback
+from sqlalchemy import create_engine, Column, String, MetaData, Table
 
 
 mydb = mysql.connector.connect(
@@ -50,7 +53,52 @@ def get_loan_data():
     # return {"loan_data": result}
 
 
+host = "sql12.freesqldatabase.com"
+database_name = "sql12671479"
+user = "sql12671479"
+password = "jcVXxlPEcP"
+port = 3306
 
-if __name__ == "__main__":
-    uvicorn.run(app, host="127.0.0.1", port=8000)
+DATABASE_URL = f"mysql+mysqlconnector://{user}:{password}@{host}:{port}/{database_name}"
+engine = create_engine(DATABASE_URL)
 
+metadata = MetaData()
+app = FastAPI()
+
+The_Table = Table(
+    "TABLE 1",
+    metadata,
+    Column("Dependents", String),
+    Column("Married", String),
+    Column("Education", String),
+    Column("Self_Employed", String)
+
+)
+
+@app.get("/distinct-values/{column_name}")
+async def get_distinct_values(column_name: str):
+    try:
+        # Dynamically retrieve the list of column names
+        table_columns = [column.name for column in The_Table.columns]
+
+        # Check if the specified column is in the list of available columns
+        if column_name not in table_columns:
+            raise HTTPException(status_code=404, detail=f"Column '{column_name}' not found in the table.")
+        
+        with engine.connect() as connection:
+            # Construct the query dynamically
+            query = select(distinct(The_Table.c[column_name]))
+            
+            # Execute the query
+            result = connection.execute(query)
+            
+            # Fetch distinct values from the result
+            distinct_values = [row[0] for row in result]
+
+        return {"distinct_values": distinct_values}
+    except HTTPException as http_exc:
+        raise http_exc  # Re-raise the HTTPException with the correct status code
+    except Exception as e:
+        print(f"An error occurred: {str(e)}")
+        traceback.print_exc()  # Print the traceback information
+        raise HTTPException(status_code=500, detail="Internal Server Error")
