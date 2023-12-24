@@ -10,13 +10,13 @@ router = APIRouter()
 class DropdownResponse(BaseModel):
     data: List[str]
 
-con, cur, db = db_connection.get_db()
+connection, cursor, db = db_connection.get_db()
 
 def get_distinct_values(column_name: str):
     query = f"SELECT DISTINCT {column_name} FROM loan_train_data WHERE {column_name} IS NOT NULL"
-    cur.execute(query)
-    data = cur.fetchall()
-    cur.close()
+    cursor.execute(query)
+    data = cursor.fetchall()
+    cursor.close()
 
     # Extract the distinct values
     values = [row[0] for row in data]
