@@ -36,51 +36,22 @@ async def predict(
         Property_Area: str = Body(...),
 ):
     try:
-        #  {
-        #     "Gender": Gender,
-        #     "Married": Married,
-        #     "Dependents": Dependents,
-        #     "Education": Education,
-        #     "Self_Employed": Self_Employed,
-        #     "ApplicantIncome": ApplicantIncome,
-        #     "CoapplicantIncome": CoapplicantIncome,
-        #     "LoanAmount": LoanAmount,
-        #     "Loan_Amount_Term": Loan_Amount_Term,
-        #     "Credit_History": Credit_History,
-        #     "Property_Area": Property_Area
-        # }
-        # Your code here
-        # new_data = pd.DataFrame({
-        #     "Gender": [Gender],
-        #     "Married": [Married],
-        #     "Dependents": [Dependents],
-        #     "Education": [Education],
-        #     "Self_Employed": [Self_Employed],
-        #     "ApplicantIncome": [ApplicantIncome],
-        #     "CoapplicantIncome": [CoapplicantIncome],
-        #     "LoanAmount": [LoanAmount],
-        #     "Loan_Amount_Term": [Loan_Amount_Term],
-        #     "Credit_History": [Credit_History],
-        #     "Property_Area": [Property_Area],
-        #     "Loan_Status": [0],
-        # })
+        new_data = pd.DataFrame({
+            "Gender": [Gender],
+            "Married": [Married],
+            "Dependents": [Dependents],
+            "Education": [Education],
+            "Self_Employed": [Self_Employed],
+            "ApplicantIncome": [ApplicantIncome],
+            "CoapplicantIncome": [CoapplicantIncome],
+            "LoanAmount": [LoanAmount],
+            "Loan_Amount_Term": [Loan_Amount_Term],
+            "Credit_History": [Credit_History],
+            "Property_Area": [Property_Area],
+            "Loan_Status": ['N'],
+        })
 
         label_encoder = LabelEncoder()
-
-        # New data point
-        new_data = pd.DataFrame({
-            'Gender': ['Male'],
-            'Married': ['Yes'],
-            'Dependents': [0],
-            'Education': ['Graduate'],
-            'Self_Employed': ['No'],
-            'ApplicantIncome': [5720],
-            'CoapplicantIncome': [0],
-            'LoanAmount': [110],
-            'Loan_Amount_Term': [360],
-            'Credit_History': [1],
-            'Property_Area': ['Urban']
-        })
 
         new_data['Self_Employed'].fillna('Not Given', inplace=True)
         new_data['Gender'].fillna('Not Given', inplace=True)
@@ -98,7 +69,7 @@ async def predict(
         # new_data['Loan_Status']= 'Not Given'
         new_data['Loan_Status'] = label_encoder.fit_transform(new_data['Loan_Status'])
 
-        loaded_model = pickle.load(open('../../pkl_files/Randomf_dataset_2_train.pkl' , 'rb'))
+        loaded_model = pickle.load(open('pkl_files/Randomf_dataset_2_train.pkl' , 'rb'))
 
         loaded_model.predict(new_data.drop(['Loan_Status'], axis=1))
 
