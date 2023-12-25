@@ -1,3 +1,4 @@
 Randomf.pkl
 venv/
 .env
+*.pyc

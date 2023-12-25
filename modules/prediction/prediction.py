@@ -6,10 +6,8 @@ import db_connection
 from fastapi import APIRouter
 from typing import Dict
 import pandas as pd
-import numpy as np
 from sklearn.preprocessing import LabelEncoder
 import pickle
-import json
 
 
 router = APIRouter()
