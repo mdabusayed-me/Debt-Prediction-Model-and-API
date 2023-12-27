@@ -40,6 +40,7 @@ test_input['Schm_Desc']=label_encoder.fit_transform(test_input['Schm_Desc'])
 
 model.predict(test_input)
 
+
 # joblib.dump(model, 'RandormForest_Classifier.joblib')
 
 # model = joblib.load('RandormForest_Classifier.joblib')
@@ -48,3 +49,4 @@ model.predict(test_input)
 pickle.dump(model , open('Knei.pkl' , 'wb'))
 loaded_model = pickle.load(open('Knei.pkl' , 'rb'))
 loaded_model.predict(test_input)
+
