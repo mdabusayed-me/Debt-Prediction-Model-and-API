@@ -1,4 +1,3 @@
-Loan_ID,Gender,Married,Dependents,Education,Self_Employed,ApplicantIncome,CoapplicantIncome,LoanAmount,Loan_Amount_Term,Credit_History,Property_Area,Loan_Status
 LP001002,Male,No,0,Graduate,No,5849,0,,12,1,Urban,Y
 LP001003,Male,Yes,1,Graduate,No,4583,1508,128000,12,1,Rural,N
 LP001005,Male,Yes,0,Graduate,Yes,3000,0,66000,12,1,Urban,Y
