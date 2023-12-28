@@ -15,10 +15,12 @@ def connect():
         )
         cursor = connection.cursor()
         db = cursor.execute
+        print("Database connected")
     except psycopg2.DatabaseError as ex:
         if connection:
             connection.rollback()
         print(ex)
+        print("Database connection error")
         sys.exit()
 
 
