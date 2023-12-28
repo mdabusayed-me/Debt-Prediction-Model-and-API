@@ -1,4 +1,3 @@
-
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 import pickle
@@ -64,5 +63,4 @@ test_input['Property_Area']= le_property_area.fit_transform(test_input['Property
 
 result = loaded_model.predict(test_input)
 
-le_loan_status.inverse_transform([result])
-
+print(le_loan_status.inverse_transform(result.ravel()))
