@@ -24,7 +24,7 @@ connection, cursor, db = db_connection.get_db()
 #     return {"message": "Loan added successfully"}
 
 
-@router.get("/loan_train_data")
+@router.get("/get_all")
 async def get_loan_train_data():
     cursor = connection.cursor()
     query = "SELECT * FROM loan_train_data"
