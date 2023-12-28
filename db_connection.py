@@ -1,16 +1,14 @@
 import sys
 import psycopg2
 from os import environ as env
-from dotenv import load_dotenv
 
-load_dotenv()
 
 connection = cursor = db = None
 
 def connect():
     global connection, cursor, db
     try:
-        connection = psycopg2.connect(env["DATABASE_URI"])
+        connection = psycopg2.connect("postgresql://postgres:Ts9GzxdU8ddQ@db.uksjmnsviwcdehlinbcp.supabase.co:5432/postgres")
         cursor = connection.cursor()
         db = cursor.execute
         print("Database connected")
