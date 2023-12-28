@@ -8,7 +8,7 @@ connection = cursor = db = None
 def connect():
     global connection, cursor, db
     try:
-        connection = psycopg2.connect("postgresql://postgres:Ts9GzxdU8ddQ@db.uksjmnsviwcdehlinbcp.supabase.co:5432/postgres")
+        connection = psycopg2.connect("")
         cursor = connection.cursor()
         db = cursor.execute
         print("Database connected")
