@@ -13,9 +13,11 @@ class DropdownResponse(BaseModel):
 connection, cursor, db = db_connection.get_db()
 
 def get_distinct_values(column_name: str):
+    cursor = connection.cursor()    
     query = f"SELECT DISTINCT {column_name} FROM loan_train_data WHERE {column_name} IS NOT NULL"
     cursor.execute(query)
     data = cursor.fetchall()
+    cursor.close()
     # Extract the distinct values
     values = [row[0] for row in data]
 
