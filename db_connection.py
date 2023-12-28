@@ -1,14 +1,18 @@
 import sys
 import psycopg2
 from os import environ as env
-
-
 connection = cursor = db = None
 
 def connect():
     global connection, cursor, db
     try:
-        connection = psycopg2.connect("")
+        connection = psycopg2.connect(
+            host=env["HOST"],
+            port=env["DB_PORT"],
+            dbname=env["DATABASE"],
+            user=env["USER"],
+            password=env["PASSWORD"]
+        )
         cursor = connection.cursor()
         db = cursor.execute
         print("Database connected")
