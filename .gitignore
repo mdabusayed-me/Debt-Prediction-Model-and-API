@@ -2,3 +2,4 @@ Randomf.pkl
 venv/
 .env
 *.pyc
+.vercel
