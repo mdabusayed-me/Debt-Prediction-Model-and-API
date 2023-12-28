@@ -22,17 +22,17 @@ connection, cursor, db = db_connection.get_db()
 
 @router.post("/predict")
 async def predict(
-        # Gender: str = Body(...),
-        # Married: str = Body(...),
-        # Dependents: int = Body(...),
-        # Education: str = Body(...),
-        # Self_Employed: str = Body(...),
-        # ApplicantIncome: float = Body(...),
-        # CoapplicantIncome: float = Body(...),
-        # LoanAmount: float = Body(...),
-        # Loan_Amount_Term: int = Body(...),
-        # Credit_History: float = Body(...),
-        # Property_Area: str = Body(...),
+        Gender: str = Body(...),
+        Married: str = Body(...),
+        Dependents: int = Body(...),
+        Education: str = Body(...),
+        Self_Employed: str = Body(...),
+        ApplicantIncome: float = Body(...),
+        CoapplicantIncome: float = Body(...),
+        LoanAmount: float = Body(...),
+        Loan_Amount_Term: int = Body(...),
+        Credit_History: float = Body(...),
+        Property_Area: str = Body(...),
 ):
     try:
         
@@ -53,22 +53,22 @@ async def predict(
 
         le_loan_status = LabelEncoder()
         le_loan_status.fit_transform(['N', 'Y'])
-        
-        loaded_model = pickle.load(open('files/pkl/RF_new_data.pkl' , 'rb'))
 
+        loaded_model = pickle.load(open('files/pkl/RF_new_data.pkl' , 'rb'))
+        
         test_input = pd.DataFrame({
-            'Gender':'Male',
-            'Married':'Yes',
-            'Dependents':0,
-            'Education':'Graduate',
-            'Self_Employed':'No',
-            'ApplicantIncome':3036,
-            'CoapplicantIncome':2504,
-            'LoanAmount':15800,
-            'Loan_Amount_Term':12,
-            'Credit_History':0,
-            'Property_Area': 'Semiurban'
-        },index=[0])
+            'Gender': Gender,
+            'Married': Married,
+            'Dependents': Dependents,
+            'Education': Education,
+            'Self_Employed': Self_Employed,
+            'ApplicantIncome': ApplicantIncome,
+            'CoapplicantIncome': CoapplicantIncome,
+            'LoanAmount': LoanAmount,
+            'Loan_Amount_Term': Loan_Amount_Term,
+            'Credit_History': Credit_History,
+            'Property_Area': Property_Area
+        }, index=[0])
 
         test_input['Gender']= le_gender.fit_transform(test_input['Gender'])
         test_input['Married']= le_married.fit_transform(test_input['Married'])
@@ -77,7 +77,9 @@ async def predict(
         test_input['Property_Area']= le_property_area.fit_transform(test_input['Property_Area'])
 
         result = loaded_model.predict(test_input)
-        return le_loan_status.inverse_transform([result])
+
+        print(le_loan_status.inverse_transform(result.ravel()))
+        return {"data": le_loan_status.inverse_transform(result.ravel())[0]}
 
     except Exception as e:
         return {"error": str(e)}

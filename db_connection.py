@@ -7,11 +7,11 @@ def connect():
     global connection, cursor, db
     try:
         connection = psycopg2.connect(
-            host="db.uksjmnsviwcdehlinbcp.supabase.co",
-            port="5432",
-            dbname="postgres",
-            user="postgres",
-            password="Ts9_Gzx?dU8ddQ+"
+            host=env["HOST"],
+            port=env["DB_PORT"],
+            dbname=env["DATABASE"],
+            user=env["USER"],
+            password=env["PASSWORD"]
         )
         cursor = connection.cursor()
         db = cursor.execute
