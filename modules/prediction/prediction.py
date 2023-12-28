@@ -8,6 +8,7 @@ from typing import Dict
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 import pickle
+from sklearn.preprocessing import LabelEncoder
 
 
 router = APIRouter()
@@ -21,56 +22,62 @@ connection, cursor, db = db_connection.get_db()
 
 @router.post("/predict")
 async def predict(
-        Gender: str = Body(...),
-        Married: str = Body(...),
-        Dependents: int = Body(...),
-        Education: str = Body(...),
-        Self_Employed: str = Body(...),
-        ApplicantIncome: float = Body(...),
-        CoapplicantIncome: float = Body(...),
-        LoanAmount: float = Body(...),
-        Loan_Amount_Term: int = Body(...),
-        Credit_History: float = Body(...),
-        Property_Area: str = Body(...),
+        # Gender: str = Body(...),
+        # Married: str = Body(...),
+        # Dependents: int = Body(...),
+        # Education: str = Body(...),
+        # Self_Employed: str = Body(...),
+        # ApplicantIncome: float = Body(...),
+        # CoapplicantIncome: float = Body(...),
+        # LoanAmount: float = Body(...),
+        # Loan_Amount_Term: int = Body(...),
+        # Credit_History: float = Body(...),
+        # Property_Area: str = Body(...),
 ):
     try:
-        new_data = pd.DataFrame({
-            "Gender": [Gender],
-            "Married": [Married],
-            "Dependents": [Dependents],
-            "Education": [Education],
-            "Self_Employed": [Self_Employed],
-            "ApplicantIncome": [ApplicantIncome],
-            "CoapplicantIncome": [CoapplicantIncome],
-            "LoanAmount": [LoanAmount],
-            "Loan_Amount_Term": [Loan_Amount_Term],
-            "Credit_History": [Credit_History],
-            "Property_Area": [Property_Area],
-            "Loan_Status": ['N'],
-        })
+        
+        le_gender = LabelEncoder()
+        le_gender.fit_transform(['Female', 'Male'])
 
-        label_encoder = LabelEncoder()
+        le_married = LabelEncoder()
+        le_married.fit_transform(['No', 'Yes'])
 
-        new_data['Self_Employed'].fillna('Not Given', inplace=True)
-        new_data['Gender'].fillna('Not Given', inplace=True)
-        new_data['Dependents'].fillna('Not Given', inplace=True)
+        le_education = LabelEncoder()
+        le_education.fit_transform(['Graduate', 'Not Graduate'])
 
-        new_data['Gender']= label_encoder.fit_transform(new_data['Gender'])
-        new_data['Married']= label_encoder.fit_transform(new_data['Married'])
-        new_data['Dependents']= label_encoder.fit_transform(new_data['Dependents'])
-        new_data['Education']= label_encoder.fit_transform(new_data['Education'])
-        new_data['Self_Employed']= label_encoder.fit_transform(new_data['Self_Employed'])
-        new_data['Property_Area']= label_encoder.fit_transform(new_data['Property_Area'])
+        le_self_employed = LabelEncoder()
+        le_self_employed.fit_transform(['No', 'Yes'])
 
+        le_property_area = LabelEncoder()
+        le_property_area.fit_transform(['Rural', 'Semiurban', 'Urban'])
 
-        new_data['Loan_Status']='Not Given'
-        # new_data['Loan_Status']= 'Not Given'
-        new_data['Loan_Status'] = label_encoder.fit_transform(new_data['Loan_Status'])
+        le_loan_status = LabelEncoder()
+        le_loan_status.fit_transform(['N', 'Y'])
+        
+        loaded_model = pickle.load(open('files/pkl/RF_new_data.pkl' , 'rb'))
 
-        loaded_model = pickle.load(open('pkl_files/Randomf_dataset_2_train.pkl' , 'rb'))
+        test_input = pd.DataFrame({
+            'Gender':'Male',
+            'Married':'Yes',
+            'Dependents':0,
+            'Education':'Graduate',
+            'Self_Employed':'No',
+            'ApplicantIncome':3036,
+            'CoapplicantIncome':2504,
+            'LoanAmount':15800,
+            'Loan_Amount_Term':12,
+            'Credit_History':0,
+            'Property_Area': 'Semiurban'
+        },index=[0])
 
-        loaded_model.predict(new_data.drop(['Loan_Status'], axis=1))
+        test_input['Gender']= le_gender.fit_transform(test_input['Gender'])
+        test_input['Married']= le_married.fit_transform(test_input['Married'])
+        test_input['Education']= le_education.fit_transform(test_input['Education'])
+        test_input['Self_Employed']= le_self_employed.fit_transform(test_input['Self_Employed'])
+        test_input['Property_Area']= le_property_area.fit_transform(test_input['Property_Area'])
 
+        result = loaded_model.predict(test_input)
+        return le_loan_status.inverse_transform([result])
 
     except Exception as e:
         return {"error": str(e)}
