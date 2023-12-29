@@ -1,7 +1,7 @@
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
-from sklearn.neighbors import KNeighborsClassifier
+from sklearn.neighbors import KNNClassifier
 import joblib
 import pickle
 
@@ -37,7 +37,7 @@ y = df[target]
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, shuffle=False)
 x_train.head()
 
-model = KNeighborsClassifier()
+model = KNNClassifier()
 model.fit(x_train, y_train)
 
 pickle.dump(model, open('files/pkl/KN.pkl', 'wb'))
