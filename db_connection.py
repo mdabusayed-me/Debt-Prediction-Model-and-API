@@ -6,13 +6,7 @@ connection = cursor = db = None
 def connect():
     global connection, cursor, db
     try:
-        connection = psycopg2.connect(
-            host=env["HOST"],
-            port=env["DB_PORT"],
-            dbname=env["DATABASE"],
-            user=env["USER"],
-            password=env["PASSWORD"]
-        )
+        connection = psycopg2.connect(env['DATABASE_URI'])
         cursor = connection.cursor()
         db = cursor.execute
         print("Database connected")
