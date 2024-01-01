@@ -28,7 +28,7 @@ RUN pip install -r requirements.txt
 COPY . .
 
 # Expose the port that the application listens on.
-EXPOSE 8000
+EXPOSE ${PORT}
 
 # Run the application.
-CMD uvicorn main:app --reload --port 8000 --host 0.0.0.0
+CMD uvicorn main:app --reload --port ${PORT} --host 0.0.0.0
