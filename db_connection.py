@@ -1,9 +1,9 @@
 import sys
 import psycopg2
 from os import environ as env
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 
-# load_dotenv()
+load_dotenv()
 connection = cursor = db = None
 
 def connect():

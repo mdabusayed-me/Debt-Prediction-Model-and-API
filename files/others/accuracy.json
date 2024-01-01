@@ -1,0 +1,60 @@
+[
+  {
+    "algorithm_name": "DecisionTreeClassifier",
+    "algorithm_type": "Classification",
+    "accuracy_score": "0.9193548387096774",
+    "precision_score": "0.93",
+    "recall_score": "0.92",
+    "f1_score": "0.91",
+    "support": "62"
+  },
+
+  {
+    "algorithm_name": "KNNClassifier",
+    "algorithm_type": "Classification",
+    "accuracy_score": "0.7580645161290323",
+    "precision_score": "0.57",
+    "recall_score": "0.76",
+    "f1_score": "0.65",
+    "support": "62"
+  },
+
+  {
+    "algorithm_name": "LogisticRegression",
+    "algorithm_type": "Regression",
+    "accuracy_score": "0.9193548387096774",
+    "precision_score": "0.93",
+    "recall_score": "0.92",
+    "f1_score": "0.91",
+    "support": "62"
+  },
+
+  {
+    "algorithm_name": "NaiveBayes",
+    "algorithm_type": "Regression",
+    "accuracy_score": "0.8870967741935484",
+    "precision_score": "0.88",
+    "recall_score": "0.89",
+    "f1_score": "0.88",
+    "support": "62"
+  },
+
+  {
+    "algorithm_name": "RandomForestClassifier",
+    "algorithm_type": "Classification",
+    "accuracy_score": "0.8548387096774194",
+    "precision_score": "0.85",
+    "recall_score": "0.85",
+    "f1_score": "0.85",
+    "support": "62"
+  },
+  {
+    "algorithm_name": "SupportVectorClassifier",
+    "algorithm_type": "Classification",
+    "accuracy_score": "0.9193548387096774",
+    "precision_score": "0.93",
+    "recall_score": "0.92",
+    "f1_score": "0.91",
+    "support": "62"
+  }
+]
