@@ -4,4 +4,5 @@ classification_models = {
     'NaiveBayes': 'NaiveBayes',
     'RandomForestClassifier': 'RandomForestClassifier',
     'SupportVectorClassifier': 'SupportVectorClassifier',
+    'RandomForestRegressor' : 'RandomForestRegressor'
 }
