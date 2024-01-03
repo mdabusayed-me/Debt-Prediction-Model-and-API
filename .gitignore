@@ -4,3 +4,7 @@ venv/
 *.pyc
 .vercel
 .venv/
+<<<<<<< HEAD
+=======
+./venv/
+>>>>>>> c7d7003c1db3e2d09d083c8d54df817c6f78ebde

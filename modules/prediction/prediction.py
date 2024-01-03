@@ -67,7 +67,8 @@ async def predict(
             classification_models['NaiveBayes']: 'files/pkl/NaiveBayes.pkl',
             classification_models['RandomForestClassifier']: 'files/pkl/RandomForestClassifier.pkl',
             classification_models['SupportVectorClassifier']: 'files/pkl/SupportVectorClassifier.pkl',
-            classification_models['RandomForestRegressor']: 'files/pkl/RFRegression.pkl'
+            classification_models['RandomForestRegressor']: 'files/pkl/RFRegression.pkl',
+            classification_models['NeuralNetwork']: 'files/pkl/NeuralNetwork.pkl'
         }
 
         predictions_array = []
