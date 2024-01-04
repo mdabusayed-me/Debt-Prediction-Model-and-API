@@ -2,7 +2,7 @@ import json
 import pickle
 from os import environ as env
 from typing import Dict, List
-
+from sklearn import metrics
 import pandas as pd
 from fastapi import APIRouter, Body
 from pydantic import BaseModel
@@ -38,7 +38,7 @@ async def predict(
         loan_amount_term: int = Body(...),
         credit_history: float = Body(...),
         property_area: str = Body(...),
-        selected_model: List[str] = Body(...),
+        selected_model: List[str] = Body(...)
 ):
     try:
 
@@ -99,20 +99,33 @@ async def predict(
                     test_input['property_area'])
 
                 result = loaded_model.predict(test_input)
+                #                # Find the accuracy info for the current model from the JSON data
+                accuracy_info = next((entry for entry in model_accuracy_data if entry["algorithm_name"] == model), None)
 
-                # matched_model = (item for item in model_accuracy_data if item["algorithm_name"] == selected_model)
-                # print(matched_model)
-
-                predictions_array.append({
-                    "result": le_loan_status.inverse_transform(result.ravel())[0],
-                    "model": model,
-                    "algorithm_type": "Classification",
-                    "accuracy_score": "0.9193548387096774",
-                    "precision_score": "0.93",
-                    "recall_score": "0.92",
-                    "f1_score": "0.91",
-                    "support": "62"
-                })
+                if accuracy_info:
+                    predictions_array.append({
+                        "result": le_loan_status.inverse_transform(result.ravel())[0],
+                        "model": model,
+                        "algorithm_type": accuracy_info["algorithm_type"],
+                        "accuracy_score": accuracy_info["accuracy_score"],
+                        "precision_score": accuracy_info["precision_score"],
+                        "recall_score": accuracy_info["recall_score"],
+                        "f1_score": accuracy_info["f1_score"],
+                        "support": accuracy_info["support"]
+                    })
+                else:
+                    predictions_array.append("Model accuracy not found")
+                # predictions_array.append({
+                #     "result": le_loan_status.inverse_transform(result.ravel())[0],
+                #     "model": model,
+                #     "algorithm_type": "Classification",
+                #     "accuracy_score": "0.9193548387096774",
+                #     "precision_score": "0.93",
+                #     "recall_score": "0.92",
+                #     "f1_score": "0.91",
+                #     "support": "62"
+                # })
+            
             else:
                 predictions_array.append("Model not found")
 

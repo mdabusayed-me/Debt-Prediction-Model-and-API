@@ -3,6 +3,8 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from modules.router import api_router
 
+
+
 import uvicorn
 
 app = FastAPI()
@@ -23,4 +25,4 @@ def index():
 app.include_router(api_router, prefix='')
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", reload=True, port=8000, host="0.0.0.0")
+    uvicorn.run("main:app", reload=True, port=8000, host="127.0.0.1")
