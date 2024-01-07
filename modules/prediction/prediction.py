@@ -66,7 +66,8 @@ async def predict(
             classification_models['LogisticRegression']: 'files/pkl/LogisticRegression.pkl',
             classification_models['NaiveBayes']: 'files/pkl/NaiveBayes.pkl',
             classification_models['RandomForestClassifier']: 'files/pkl/RandomForestClassifier.pkl',
-            classification_models['SupportVectorClassifier']: 'files/pkl/SupportVectorClassifier.pkl'
+            classification_models['SupportVectorClassifier']: 'files/pkl/SupportVectorClassifier.pkl',
+            classification_models['RandomForestRegressor']: 'files/pkl/RFRegression.pkl'
         }
 
         predictions_array = []
@@ -98,7 +99,7 @@ async def predict(
                 test_input['property_area'] = le_property_area.fit_transform(
                     test_input['property_area'])
 
-                result = loaded_model.predict(test_input)
+                result = loaded_model.predict(test_input).astype(int)
 
                 # matched_model = (item for item in model_accuracy_data if item["algorithm_name"] == selected_model)
                 # print(matched_model)
