@@ -56,5 +56,14 @@
     "recall_score": "0.92",
     "f1_score": "0.91",
     "support": "62"
+  },
+  {
+    "algorithm_name": "RandomForestRegressor",
+    "algorithm_type": "Regression",
+    "accuracy_score": "0.8709677419354839",
+    "precision_score": "0.89",
+    "recall_score": "0.93",
+    "f1_score": "0.91",
+    "support": "62"
   }
 ]
