@@ -56,5 +56,16 @@
     "recall_score": "0.92",
     "f1_score": "0.91",
     "support": "62"
-  }
+  },
+  {
+    "algorithom_name": "GradientBoostingClassifier",
+    "algorithom_type": "Classification",
+    "accuracy_score": "0.9193548387096774",
+    "precision_score": "0.93",
+    "recall_score": "0.92",
+    "f1_score": "0.91",
+    "support": "62"
+   }
+
+
 ]
