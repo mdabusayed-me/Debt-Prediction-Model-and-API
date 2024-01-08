@@ -11,7 +11,7 @@ from sklearn.preprocessing import LabelEncoder
 import db_connection
 from config.constant import classification_models
 
-with open('files/others/accuracy.json', 'r') as file:
+with open( 'files/others/accuracy.json', 'r') as file:
     model_accuracy_data = json.load(file)
 
 
@@ -67,6 +67,7 @@ async def predict(
             classification_models['NaiveBayes']: 'files/pkl/NaiveBayes.pkl',
             classification_models['RandomForestClassifier']: 'files/pkl/RandomForestClassifier.pkl',
             classification_models['SupportVectorClassifier']: 'files/pkl/SupportVectorClassifier.pkl',
+            classification_models['GradientBoostingClassifier']: 'files/pkl/GradientBoostingClassifier.pkl',
             classification_models['RandomForestRegressor']: 'files/pkl/RFRegression.pkl'
         }
 
@@ -99,6 +100,7 @@ async def predict(
                 test_input['property_area'] = le_property_area.fit_transform(
                     test_input['property_area'])
 
+                result = loaded_model.predict(test_input)
                 result = loaded_model.predict(test_input).astype(int)
                 #                # Find the accuracy info for the current model from the JSON data
                 accuracy_info = next((entry for entry in model_accuracy_data if entry["algorithm_name"] == model), None)
