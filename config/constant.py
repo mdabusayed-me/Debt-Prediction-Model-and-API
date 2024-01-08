@@ -4,6 +4,6 @@ classification_models = {
     'NaiveBayes': 'NaiveBayes',
     'RandomForestClassifier': 'RandomForestClassifier',
     'SupportVectorClassifier': 'SupportVectorClassifier',
-    'GradientBoostingClassifier': 'GradientBoostingClassifier',   
-    
+    'GradientBoostingClassifier': 'GradientBoostingClassifier',    
+    'RandomForestRegressor': 'RandomForestRegressor',
 }
