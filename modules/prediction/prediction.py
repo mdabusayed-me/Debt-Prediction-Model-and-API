@@ -87,9 +87,8 @@ async def predict(
                     test_input['property_area'])
 
                 result = loaded_model.predict(test_input).astype(int)
-
-                # matched_model = (item for item in model_accuracy_data if item["algorithm_name"] == selected_model)
-                # print(matched_model)
+                # # Find the accuracy info for the current model from the JSON data
+                accuracy_info = next((entry for entry in model_accuracy_data if entry["algorithm_name"] == model), None)
 
                 predictions_array.append({
                     "result": le_loan_status.inverse_transform(result.ravel())[0],
