@@ -11,7 +11,7 @@ from sklearn.preprocessing import LabelEncoder
 import db_connection
 from config.constant import classification_models
 
-with open( 'files/others/accuracy.json', 'r') as file:
+with open('files/others/accuracy.json', 'r') as file:
     model_accuracy_data = json.load(file)
 
 

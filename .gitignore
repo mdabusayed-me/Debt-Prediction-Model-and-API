@@ -3,5 +3,4 @@ venv/
 .env
 *.pyc
 .vercel
-newenv\
 env

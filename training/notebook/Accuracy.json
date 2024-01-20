@@ -60,10 +60,10 @@
    {
     "algorithom_name": "GradientBoostingClassifier",
     "algorithom_type": "Classification",
-    "accuracy_score": "0.9193548387096774",
-    "precision_score": "0.93",
-    "recall_score": "0.92",
-    "f1_score": "0.91",
+    "accuracy_score": "0.8548387096774194",
+    "precision_score": "0.85",
+    "recall_score": "0.85",
+    "f1_score": "0.85",
     "support": "62"
    }
 
