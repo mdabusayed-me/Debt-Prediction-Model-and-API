@@ -42,32 +42,32 @@ async def predict(
 ):
     try:
 
-        le_gender = LabelEncoder()
-        le_gender.fit_transform(['Female', 'Male'])
+        # le_gender = LabelEncoder()
+        # le_gender.fit_transform(['Female', 'Male'])
 
-        le_married = LabelEncoder()
-        le_married.fit_transform(['No', 'Yes'])
+        # le_married = LabelEncoder()
+        # le_married.fit_transform(['No', 'Yes'])
 
-        le_education = LabelEncoder()
-        le_education.fit_transform(['Graduate', 'Not Graduate'])
+        # le_education = LabelEncoder()
+        # le_education.fit_transform(['Graduate', 'Not Graduate'])
 
-        le_self_employed = LabelEncoder()
-        le_self_employed.fit_transform(['No', 'Yes'])
+        # le_self_employed = LabelEncoder()
+        # le_self_employed.fit_transform(['No', 'Yes'])
 
-        le_property_area = LabelEncoder()
-        le_property_area.fit_transform(['Rural', 'Semiurban', 'Urban'])
+        # le_property_area = LabelEncoder()
+        # le_property_area.fit_transform(['Rural', 'Semiurban', 'Urban'])
 
-        le_loan_status = LabelEncoder()
-        le_loan_status.fit_transform(['N', 'Y'])
+        # le_loan_status = LabelEncoder()
+        # le_loan_status.fit_transform(['N', 'Y'])
 
         model_files = {
             # classification_models['DecisionTreeClassifier']: 'files/pkl/DecisionTreeClassifier.pkl',
-            classification_models['KNNClassifier']: 'files/pkl/KNNClassifier.pkl',
-            classification_models['LogisticRegression']: 'files/pkl/LogisticRegression.pkl',
-            classification_models['NaiveBayes']: 'files/pkl/NaiveBayes.pkl',
+            # classification_models['KNNClassifier']: 'files/pkl/KNNClassifier.pkl',
+            # classification_models['LogisticRegression']: 'files/pkl/LogisticRegression.pkl',
+            # classification_models['NaiveBayes']: 'files/pkl/NaiveBayes.pkl',
             classification_models['RandomForestClassifier']: 'files/pkl/RandomForestClassifier.pkl',
-            classification_models['SupportVectorClassifier']: 'files/pkl/SupportVectorClassifier.pkl',
-            classification_models['RandomForestRegressor']: 'files/pkl/RFRegression.pkl'
+            # classification_models['SupportVectorClassifier']: 'files/pkl/SupportVectorClassifier.pkl',
+            # classification_models['RandomForestRegressor']: 'files/pkl/RFRegression.pkl'
         }
 
         predictions_array = []
