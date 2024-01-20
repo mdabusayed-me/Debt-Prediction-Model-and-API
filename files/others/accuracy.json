@@ -48,6 +48,7 @@
     "f1_score": "0.85",
     "support": "62"
   },
+  
   {
     "algorithm_name": "SupportVectorClassifier",
     "algorithm_type": "Classification",
@@ -57,6 +58,17 @@
     "f1_score": "0.91",
     "support": "62"
   },
+
+  {
+    "algorithom_name": "GradientBoostingClassifier",
+    "algorithom_type": "Classification",
+    "accuracy_score": "0.8548387096774194",
+    "precision_score": "0.85",
+    "recall_score": "0.85",
+    "f1_score": "0.85",
+    "support": "62"
+  },
+
   {
     "algorithm_name": "RandomForestRegressor",
     "algorithm_type": "Regression",
