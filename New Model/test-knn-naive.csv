@@ -1,0 +1,616 @@
+KNN,Test,Naive,Test,Actual
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y,FALSE,N, ,N
+Y,FALSE,Y,FALSE,N
+Y, ,N,FALSE,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y,FALSE,N, ,N
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y,FALSE,Y,FALSE,N
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y, ,N,FALSE,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y,FALSE,Y,FALSE,N
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y,FALSE,N, ,N
+Y,FALSE,N, ,N
+Y,FALSE,Y,FALSE,N
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y,FALSE,Y,FALSE,N
+Y,FALSE,Y,FALSE,N
+Y,FALSE,N, ,N
+Y, ,N,FALSE,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y, ,N,FALSE,Y
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y,FALSE,N, ,N
+Y, ,N,FALSE,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y,FALSE,Y,FALSE,N
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y, ,N,FALSE,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y,FALSE,N, ,N
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y,FALSE,N, ,N
+Y, ,N,FALSE,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y, ,N,FALSE,Y
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y,FALSE,Y,FALSE,N
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,N,FALSE,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,N,FALSE,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y, ,N,FALSE,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y,FALSE,Y,FALSE,N
+Y,FALSE,Y,FALSE,N
+Y,FALSE,N, ,N
+Y, ,N,FALSE,Y
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y,FALSE,Y,FALSE,N
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y,FALSE,N, ,N
+Y, ,N,FALSE,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y, ,N,FALSE,Y
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,N,FALSE,Y
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y,FALSE,Y,FALSE,N
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y,FALSE,N, ,N
+Y,FALSE,Y,FALSE,N
+Y, ,N,FALSE,Y
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y,FALSE,N, ,N
+Y,FALSE,Y,FALSE,N
+Y, ,N,FALSE,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y, ,N,FALSE,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y,FALSE,N, ,N
+Y,FALSE,N, ,N
+Y,FALSE,N, ,N
+Y, ,N,FALSE,Y
+Y,FALSE,N, ,N
+Y, ,N,FALSE,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y, ,N,FALSE,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y, ,N,FALSE,Y
+Y, ,N,FALSE,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y,FALSE,Y,FALSE,N
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y,FALSE,N, ,N
+Y, ,N,FALSE,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,N,FALSE,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,N,FALSE,Y
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y,FALSE,Y,FALSE,N
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y,FALSE,N, ,N
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,Y,FALSE,N
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y, ,Y, ,Y
+Y,FALSE,N, ,N
+,192,,153,
