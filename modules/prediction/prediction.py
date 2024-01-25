@@ -102,7 +102,7 @@ async def predict(
 
                 result = loaded_model.predict(test_input)
                 result = loaded_model.predict(test_input).astype(int)
-                #                # Find the accuracy info for the current model from the JSON data
+                # # Find the accuracy info for the current model from the JSON data
                 accuracy_info = next((entry for entry in model_accuracy_data if entry["algorithm_name"] == model), None)
 
                 if accuracy_info:

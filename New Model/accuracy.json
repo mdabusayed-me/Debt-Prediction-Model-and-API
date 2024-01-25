@@ -1,0 +1,30 @@
+[
+    {
+      "algorithm_name": "DecisionTreeClassifier",
+      "algorithm_type": "Classification",
+      "accuracy_score": "0.7886178861788617",
+      "precision_score": "0.83",
+      "recall_score": "0.79",
+      "f1_score": "0.0.76",
+      "support": "123"
+    },
+    
+    {
+        "algorithm_name": "LogisticRegression",
+        "algorithm_type": "Regression",
+        "accuracy_score": "0.7886178861788617",
+        "precision_score": "0.81",
+        "recall_score": "0.78",
+        "f1_score": "0.75",
+        "support": "123"
+      },
+      {
+        "algorithom_name": "GradientBoostingClassifier",
+        "algorithom_type": "Classification",
+        "accuracy_score": "0.7723577235772358",
+        "precision_score": "0.79",
+        "recall_score": "0.77",
+        "f1_score": "0.75",
+        "support": "123"
+      }
+]     
