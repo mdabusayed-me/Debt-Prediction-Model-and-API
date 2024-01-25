@@ -22,90 +22,59 @@ class DropdownResponse(BaseModel):
     data: List[str]
 
 
+# Define the input data model using Pydantic
+class InputData(BaseModel):
+    married: str= Body(...)
+    gender: str= Body(...)
+    dependents: str= Body(...)
+    education: str= Body(...)
+    self_employed: str= Body(...)
+    applicantIncome: float= Body(...)
+    coapplicant_income: float= Body(...)
+    loan_amount: float= Body(...)
+    loan_amount_term: float= Body(...)
+    credit_history: float= Body(...)
+    property_area: str= Body(...)
+    selected_model: List[str] = Body(...)
+
+
 connection, cursor, db = db_connection.get_db()
 
 
 @router.post("/predict")
 async def predict(
-        gender: str = Body(...),
-        married: str = Body(...),
-        dependents: int = Body(...),
-        education: str = Body(...),
-        self_employed: str = Body(...),
-        applicantIncome: float = Body(...),
-        coapplicant_income: float = Body(...),
-        loan_amount: float = Body(...),
-        loan_amount_term: int = Body(...),
-        credit_history: float = Body(...),
-        property_area: str = Body(...),
-        selected_model: List[str] = Body(...)
+        data: InputData
 ):
     try:
 
-        le_gender = LabelEncoder()
-        le_gender.fit_transform(['Female', 'Male'])
-
-        le_married = LabelEncoder()
-        le_married.fit_transform(['No', 'Yes'])
-
-        le_education = LabelEncoder()
-        le_education.fit_transform(['Graduate', 'Not Graduate'])
-
-        le_self_employed = LabelEncoder()
-        le_self_employed.fit_transform(['No', 'Yes'])
-
-        le_property_area = LabelEncoder()
-        le_property_area.fit_transform(['Rural', 'Semiurban', 'Urban'])
-
-        le_loan_status = LabelEncoder()
-        le_loan_status.fit_transform(['N', 'Y'])
-
         model_files = {
             # classification_models['DecisionTreeClassifier']: 'files/pkl/DecisionTreeClassifier.pkl',
-            classification_models['KNNClassifier']: 'files/pkl/KNNClassifier.pkl',
-            classification_models['LogisticRegression']: 'files/pkl/LogisticRegression.pkl',
-            classification_models['NaiveBayes']: 'files/pkl/NaiveBayes.pkl',
+            # classification_models['KNNClassifier']: 'files/pkl/KNNClassifier.pkl',
+            # classification_models['LogisticRegression']: 'files/pkl/LogisticRegression.pkl',
+            # classification_models['NaiveBayes']: 'files/pkl/NaiveBayes.pkl',
             classification_models['RandomForestClassifier']: 'files/pkl/RandomForestClassifier.pkl',
-            classification_models['SupportVectorClassifier']: 'files/pkl/SupportVectorClassifier.pkl',
-            classification_models['RandomForestRegressor']: 'files/pkl/RFRegression.pkl'
+            # classification_models['SupportVectorClassifier']: 'files/pkl/SupportVectorClassifier.pkl',
+            # classification_models['RandomForestRegressor']: 'files/pkl/RFRegression.pkl'
         }
 
         predictions_array = []
-        for model in selected_model:
+        for model in data.selected_model:
             if model in model_files:
                 loaded_model = pickle.load(open(model_files[model], 'rb'))
-                test_input = pd.DataFrame({
-                    'gender': gender,
-                    'married': married,
-                    'dependents': dependents,
-                    'education': education,
-                    'self_employed': self_employed,
-                    'applicantIncome': applicantIncome,
-                    'coapplicant_income': coapplicant_income,
-                    'loan_amount': loan_amount,
-                    'loan_amount_term': loan_amount_term,
-                    'credit_history': credit_history,
-                    'property_area': property_area
-                }, index=[0])
+                input_data_df = pd.DataFrame([data.model_dump()])
 
-                test_input['gender'] = le_gender.fit_transform(
-                    test_input['gender'])
-                test_input['married'] = le_married.fit_transform(
-                    test_input['married'])
-                test_input['education'] = le_education.fit_transform(
-                    test_input['education'])
-                test_input['self_employed'] = le_self_employed.fit_transform(
-                    test_input['self_employed'])
-                test_input['property_area'] = le_property_area.fit_transform(
-                    test_input['property_area'])
+                input_data_df = pd.get_dummies(input_data_df, columns=['gender', 'married', 'dependents', 'education', 'self_employed', 'property_area'])
 
-                result = loaded_model.predict(test_input).astype(int)
-                # # Find the accuracy info for the current model from the JSON data
+                input_data_df = input_data_df.reindex(columns=loaded_model.feature_names_in_, fill_value=0)
+
+                prediction = loaded_model.predict(input_data_df)
+
+                # Find the accuracy info for the current model from the JSON data
                 accuracy_info = next((entry for entry in model_accuracy_data if entry["algorithm_name"] == model), None)
 
                 if accuracy_info:
                     predictions_array.append({
-                        "result": le_loan_status.inverse_transform(result.ravel())[0],
+                        "result": prediction[0],
                         "model": model,
                         "algorithm_type": accuracy_info["algorithm_type"],
                         "accuracy_score": accuracy_info["accuracy_score"],
@@ -114,18 +83,6 @@ async def predict(
                         "f1_score": accuracy_info["f1_score"],
                         "support": accuracy_info["support"]
                     })
-                else:
-                    predictions_array.append("Model accuracy not found")
-                # predictions_array.append({
-                #     "result": le_loan_status.inverse_transform(result.ravel())[0],
-                #     "model": model,
-                #     "algorithm_type": "Classification",
-                #     "accuracy_score": "0.9193548387096774",
-                #     "precision_score": "0.93",
-                #     "recall_score": "0.92",
-                #     "f1_score": "0.91",
-                #     "support": "62"
-                # })
             
             else:
                 predictions_array.append("Model not found")
