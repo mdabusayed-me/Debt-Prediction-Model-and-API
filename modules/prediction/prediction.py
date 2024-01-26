@@ -49,7 +49,7 @@ async def predict(
 
         model_files = {
             # classification_models['DecisionTreeClassifier']: 'files/pkl/DecisionTreeClassifier.pkl',
-            # classification_models['KNNClassifier']: 'files/pkl/KNNClassifier.pkl',
+            classification_models['KNNClassifier']: 'files/pkl/KNNClassifier.pkl',
             # classification_models['LogisticRegression']: 'files/pkl/LogisticRegression.pkl',
             # classification_models['NaiveBayes']: 'files/pkl/NaiveBayes.pkl',
             classification_models['RandomForestClassifier']: 'files/pkl/RandomForestClassifier.pkl',
