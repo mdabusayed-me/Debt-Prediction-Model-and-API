@@ -12,13 +12,12 @@
   {
     "algorithm_name": "KNNClassifier",
     "algorithm_type": "Classification",
-    "accuracy_score": "0.7580645161290323",
-    "precision_score": "0.57",
-    "recall_score": "0.76",
-    "f1_score": "0.65",
-    "support": "62"
+    "support": "62",
+    "precision_score": 0.8973799126637555,
+    "accuracy_score": 0.9055374592833876,
+    "f1_score": 0.9340909090909091,
+    "recall_score": 0.9739336492890995
   },
-
   {
     "algorithm_name": "LogisticRegression",
     "algorithm_type": "Regression",
@@ -42,12 +41,13 @@
   {
     "algorithm_name": "RandomForestClassifier",
     "algorithm_type": "Classification",
-    "accuracy_score": "0.8548387096774194",
-    "precision_score": "0.85",
-    "recall_score": "0.85",
-    "f1_score": "0.85",
-    "support": "62"
+    "support": "62",
+    "precision_score": 0.802247191011236,
+    "accuracy_score": 0.750814332247557,
+    "f1_score": 0.823529411764706,
+    "recall_score": 0.8459715639810427
   },
+
   {
     "algorithm_name": "SupportVectorClassifier",
     "algorithm_type": "Classification",
